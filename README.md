@@ -1,57 +1,56 @@
 # jwj-dev-skills-marketplace
 
-Skill repo for splitting one project into:
-- Public child repo: `<project>`
-- Private main repo: `<project>-dev`
+這個倉庫提供開發向 skills，首個 skill 用於將單一專案拆分為：
+- 公開子倉：`<project>`
+- 私有主倉：`<project>-dev`
 
-Includes:
-- Standard skill at `skills/split-main-sub-repo`
-- Claude marketplace metadata at `.claude-plugin/`
+## 倉庫內容
+- 標準 skill：`skills/split-main-sub-repo`
+- Claude marketplace 設定：`.claude-plugin/`
 
-This marketplace is intended to host multiple development-oriented skills over time.
+此 marketplace 後續會持續加入更多開發向 skills。
 
-## Install (Claude Code marketplace)
+## 安裝方式一：Claude Code marketplace
 1. `/plugin marketplace add jhihweijhan/jwj-dev-skills-marketplace`
 2. `/plugin install split-main-sub-repo-plugin@jwj-dev-skills-marketplace`
 
-## Install (`npx skills`, cross-agent)
+## 安裝方式二：`npx skills`（跨 agent）
 
-List available skills in this repo:
+先查看此 repo 有哪些可安裝 skills：
 
 ```bash
 npx -y skills@latest add jhihweijhan/jwj-dev-skills-marketplace -l
 ```
 
-Install this skill to a specific agent (example: Codex):
+安裝指定 skill 到單一 agent（以 Codex 為例）：
 
 ```bash
 npx -y skills@latest add jhihweijhan/jwj-dev-skills-marketplace --skill split-main-sub-repo --agent codex -y --copy
 ```
 
-Install to multiple agents:
+安裝到多個 agent：
 
 ```bash
 npx -y skills@latest add jhihweijhan/jwj-dev-skills-marketplace --skill split-main-sub-repo --agent claude-code --agent codex --agent cursor -y --copy
 ```
 
-## Important Clarification
+## 重要說明
 
-`npx skills@latest` does **not** require Claude marketplace files.
+`npx skills@latest` **不需要** Claude marketplace 檔案。
 
-What it needs is a skill repo with valid skill structure, typically:
+`npx skills` 主要要求是 skill 結構合法，通常包含：
 - `skills/<skill-name>/SKILL.md`
-- Valid frontmatter in `SKILL.md` (`name`, `description`)
-- Publicly reachable Git source (GitHub owner/repo or URL)
+- `SKILL.md` 內有合法 frontmatter（`name`、`description`）
+- 可存取的 Git 來源（GitHub `owner/repo` 或 URL）
 
-So:
-- For `/plugin ...` flow: need `.claude-plugin/marketplace.json`
-- For `npx skills ...` flow: marketplace metadata is optional; valid skill structure is the key
+因此：
+- `/plugin ...` 流程：需要 `.claude-plugin/marketplace.json`
+- `npx skills ...` 流程：marketplace 設定非必要，skill 結構才是關鍵
 
-## Install (manual / other agents)
-Copy this folder to your agent skills path:
-- `skills/split-main-sub-repo`
+## 手動安裝（其他 agent）
+把 `skills/split-main-sub-repo` 複製到你的 agent skills 路徑。
 
-Common paths:
+常見路徑：
 - `~/.claude/skills/`
 - `~/.copilot/skills/`
 - `.agents/skills/`
