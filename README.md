@@ -1,5 +1,7 @@
 # jwj-dev-skills-marketplace
 
+語言：繁體中文 | [English](README.en.md)
+
 這個倉庫提供開發向 skills，首個 skill 用於將單一專案拆分為：
 - 公開子倉：`<project>`
 - 私有主倉：`<project>-dev`
