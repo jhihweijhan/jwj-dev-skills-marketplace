@@ -1,0 +1,13 @@
+.claude/
+.serena/
+.beads/
+skills/
+AGENTS.md
+CLAUDE.md
+docs/plans/
+tmp/
+sandbox/
+*.bin
+*.key
+*.pem
+.env*

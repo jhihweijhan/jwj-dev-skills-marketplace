@@ -1,0 +1,12 @@
+{
+  "name": "split-main-sub-repo-marketplace",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "split-main-sub-repo-plugin",
+      "source": ".",
+      "description": "Split project into public child repo and private -dev main repo with interactive detail collection.",
+      "tags": ["git", "submodule", "repository", "workflow"]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "split-main-sub-repo-plugin",
+  "version": "1.0.0",
+  "description": "Split one project into a public sub-repo and private main-repo-dev with submodule workflow.",
+  "skills": [
+    "skills/split-main-sub-repo"
+  ]
+}
