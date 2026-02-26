@@ -1,4 +1,4 @@
-# split-main-sub-repo-skill
+# jwj-dev-skills-marketplace
 
 Skill repo for splitting one project into:
 - Public child repo: `<project>`
@@ -11,7 +11,7 @@ Includes:
 This marketplace is intended to host multiple development-oriented skills over time.
 
 ## Install (Claude Code marketplace)
-1. `/plugin marketplace add jhihweijhan/split-main-sub-repo-skill`
+1. `/plugin marketplace add jhihweijhan/jwj-dev-skills-marketplace`
 2. `/plugin install split-main-sub-repo-plugin@jwj-dev-skills-marketplace`
 
 ## Install (manual / other agents)
